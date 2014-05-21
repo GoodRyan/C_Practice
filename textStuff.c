@@ -67,9 +67,10 @@ void blankTabNewlineCounting()
  */
 void removeExtraBlanks()
 {
-	char ch;
-
-	printf("Enter a character:");
-	fflush(stdout);
-	ch = getchar();
+	int c, p = EOF;
+	while ((c = getchar()) != EOF) {
+	    if ((c != ' ') + (p != ' ') > 0) putchar(c);
+	    p = c;
+	    fflush(stdout);
+	}
 }
