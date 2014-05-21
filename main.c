@@ -10,5 +10,6 @@
 
 int main()
 {
-	characterCounting();
+	removeExtraBlanks();
+	return 0;
 }

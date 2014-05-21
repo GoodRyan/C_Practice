@@ -9,5 +9,8 @@
 #define TEXTSTUFF_H_
 
 void characterCounting();
+void lineCounting();
+void blankTabNewlineCounting();
+void removeExtraBlanks();
 
 #endif /* TEXTSTUFF_H_ */
