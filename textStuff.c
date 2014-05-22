@@ -69,8 +69,39 @@ void removeExtraBlanks()
 {
 	int c, p = EOF;
 	while ((c = getchar()) != EOF) {
-	    if ((c != ' ') + (p != ' ') > 0) putchar(c);
-	    p = c;
+	    if ((c != ' ') + (p != ' ') > 0){
+	    	putchar(c);
+	    	p = c;
+	    }
+
 	    fflush(stdout);
+	}
+}
+
+/**
+ * Takes tab and backslash inputs and converts
+ * them to their character equivalents. I also
+ * attempted to do this with backspace, however
+ * the terminal eats the character before it
+ * can be processed.
+ */
+void unambiguousText()
+{
+	int c;
+
+	while((c = getchar()) != EOF) {
+		if(c == '\t'){
+			printf("\\t");
+		}
+		else if(c == '\b'){
+			printf("\\b");
+		}
+		else if(c == '\\'){
+			printf("\\\\");
+		}
+		else{
+			putchar(c);
+		}
+		fflush(stdout);
 	}
 }

@@ -10,6 +10,6 @@
 
 int main()
 {
-	removeExtraBlanks();
+	unambiguousText();
 	return 0;
 }

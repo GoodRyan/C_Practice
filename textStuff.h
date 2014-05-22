@@ -12,5 +12,6 @@ void characterCounting();
 void lineCounting();
 void blankTabNewlineCounting();
 void removeExtraBlanks();
+void unambiguousText();
 
 #endif /* TEXTSTUFF_H_ */
