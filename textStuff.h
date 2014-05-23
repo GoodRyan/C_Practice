@@ -13,5 +13,6 @@ void lineCounting();
 void blankTabNewlineCounting();
 void removeExtraBlanks();
 void unambiguousText();
+void seperateWordsByLine();
 
 #endif /* TEXTSTUFF_H_ */

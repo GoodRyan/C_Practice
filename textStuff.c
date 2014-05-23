@@ -105,3 +105,20 @@ void unambiguousText()
 		fflush(stdout);
 	}
 }
+
+/**
+ * Takes input and places one word per line.
+ */
+void seperateWordsByLine(){
+	char c;
+
+	while ((c = getchar()) != EOF){
+		if (c == ' ' || c == '\t'){
+			putchar('\n');
+		}
+		else{
+		putchar(c);
+		}
+		fflush(stdout);
+	}
+}

@@ -10,6 +10,6 @@
 
 int main()
 {
-	unambiguousText();
+	seperateWordsByLine();
 	return 0;
 }
