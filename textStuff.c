@@ -106,7 +106,7 @@ void unambiguousText()
 	}
 }
 
-/**
+/*
  * Takes input and places one word per line.
  */
 void seperateWordsByLine(){
@@ -122,3 +122,64 @@ void seperateWordsByLine(){
 		fflush(stdout);
 	}
 }
+
+/*
+ * Helper function for wordLengthHistogram
+ * returns word length after it sees a space or new line
+ */
+int getWordLength(){
+	int wordLength = 0;
+	int inputCharacter;
+	wordLength++;
+	while((inputCharacter = getchar()) != ' ' && inputCharacter != '\n'){
+		wordLength++;
+	}
+	return wordLength;
+}
+
+/*
+ *	Helper function for wordLengthHistogram
+ *	prints a bar based on barLength (compased of dashes)
+ */
+void printBar(int barLength){
+	int counter = 0;
+
+	while (counter < barLength){
+		printf("-");
+		counter++;
+	}
+}
+
+/*
+ * Prints histogram of word lengths
+ * Works for words up to 10 characters long.
+ */
+void wordLengthHistogram(){
+	int wordLengths[10];
+	int counter = 0;
+	int input, wordLength;
+
+	//initialize all array values to zero
+	while (counter < 10){
+		wordLengths[counter] = 0;
+		counter++;
+	}
+
+	//get word lengths of input
+	while((input = getchar() != EOF)){
+		wordLength = getWordLength();
+		wordLengths[wordLength]++;
+
+		wordLength = 0;
+	}
+
+	//print histogram
+	counter = 0;
+	while(counter < 10){
+		printf("Length %d: ", counter);
+		printBar(wordLengths[counter]);
+		printf("\n");
+		counter++;
+	}
+}
+

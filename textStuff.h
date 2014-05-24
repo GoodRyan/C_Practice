@@ -14,5 +14,6 @@ void blankTabNewlineCounting();
 void removeExtraBlanks();
 void unambiguousText();
 void seperateWordsByLine();
+void wordLengthHistogram();
 
 #endif /* TEXTSTUFF_H_ */

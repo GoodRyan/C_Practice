@@ -10,6 +10,6 @@
 
 int main()
 {
-	seperateWordsByLine();
+	wordLengthHistogram();
 	return 0;
 }
