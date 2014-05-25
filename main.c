@@ -10,6 +10,6 @@
 
 int main()
 {
-	wordLengthHistogram();
+	printLongerThanEighty();
 	return 0;
 }

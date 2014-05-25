@@ -15,5 +15,7 @@ void removeExtraBlanks();
 void unambiguousText();
 void seperateWordsByLine();
 void wordLengthHistogram();
+void printLongestInputLine();
+void printLongerThanEighty();
 
 #endif /* TEXTSTUFF_H_ */
